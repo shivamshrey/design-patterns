@@ -1,3 +1,12 @@
+/**
+ * Decorator is a structural design pattern that lets you attach new behaviors to objects by placing these objects
+ * inside special wrapper objects that contain the behaviors.
+ *
+ * https://refactoring.guru/design-patterns/decorator
+ * https://youtu.be/GCraGHx6gso
+ * https://youtu.be/ZdE9x-qE8_c
+ */
+
 package Structural;
 
 interface Dress {
