@@ -1,28 +1,30 @@
+package behavioral;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Mediator is a behavioral design pattern that lets you reduce chaotic
  * dependencies between objects. The pattern restricts direct communications
- * between the objects and forces them to collaborate only via a mediator object.
+ * between the objects and forces them to collaborate only via a mediator
+ * object.
  * 
  * https://refactoring.guru/design-patterns/mediator
  * https://howtodoinjava.com/design-patterns/behavioral/mediator-pattern/
  */
 
-package Behavioral;
-
-import java.util.HashMap;
-import java.util.Map;
-
 // Mediator interface
 interface Mediator {
-	void sendMessage(String msg, String userId);	 
-    void addUser(User user);
+	void sendMessage(String msg, String userId);
+
+	void addUser(User user);
 }
 
 // Concrete Mediator
 class ChatRoom implements Mediator {
 
 	private Map<String, User> usersMap = new HashMap<>();
-	
+
 	@Override
 	public void sendMessage(String msg, String userId) {
 		User u = usersMap.get(userId);
@@ -90,19 +92,19 @@ public class MediatorDemo {
 
 	public static void main(String[] args) {
 		Mediator chatroom = new ChatRoom();
-        
-        User user1 = new ChatUser(chatroom, "1", "Alex");
-        User user2 = new ChatUser(chatroom, "2", "Brian");
-        User user3 = new ChatUser(chatroom, "3", "Charles");
-        User user4 = new ChatUser(chatroom, "4", "David");
-         
-        chatroom.addUser(user1);
-        chatroom.addUser(user2);
-        chatroom.addUser(user3);
-        chatroom.addUser(user4);
- 
-        user1.send("Hello Brian", "2");
-        user2.send("Hey buddy", "1");
+
+		User user1 = new ChatUser(chatroom, "1", "Alex");
+		User user2 = new ChatUser(chatroom, "2", "Brian");
+		User user3 = new ChatUser(chatroom, "3", "Charles");
+		User user4 = new ChatUser(chatroom, "4", "David");
+
+		chatroom.addUser(user1);
+		chatroom.addUser(user2);
+		chatroom.addUser(user3);
+		chatroom.addUser(user4);
+
+		user1.send("Hello Brian", "2");
+		user2.send("Hey buddy", "1");
 	}
 
 }

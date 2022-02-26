@@ -1,14 +1,13 @@
+package behavioral;
+
+import java.text.DecimalFormat;
+
 /**
  * Visitor is a behavioral design pattern that lets you separate algorithms from
  * the objects on which they operate.
  * 
- * https://youtu.be/pL4mOUDi54o
- * https://refactoring.guru/design-patterns/visitor
+ * https://youtu.be/pL4mOUDi54o https://refactoring.guru/design-patterns/visitor
  */
-
-package Behavioral;
-
-import java.text.DecimalFormat;
 
 interface Visitor {
 
