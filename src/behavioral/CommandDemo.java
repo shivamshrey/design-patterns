@@ -6,7 +6,8 @@ package behavioral;
  * transformation lets you pass requests as a method arguments, delay or queue a
  * request's execution, and support undoable operations.
  *
- * https://youtu.be/9qA5kw8dcSU https://refactoring.guru/design-patterns/command
+ * https://youtu.be/9qA5kw8dcSU
+ * https://refactoring.guru/design-patterns/command
  */
 
 interface Command {

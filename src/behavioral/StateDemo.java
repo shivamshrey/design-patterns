@@ -16,7 +16,8 @@ package behavioral;
  * context, stores a reference to one of the state objects that represents its
  * current state, and delegates all the state-related work to that object.
  * 
- * https://youtu.be/N12L5D78MAA https://refactoring.guru/design-patterns/state
+ * https://youtu.be/N12L5D78MAA
+ * https://refactoring.guru/design-patterns/state
  * https://www.baeldung.com/java-state-design-pattern
  */
 // State
